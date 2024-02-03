@@ -1,0 +1,111 @@
+/* Reset et styles globaux */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monospace', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Section de contenu Tetra */
+.content-tetra {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Canvas */
+#canvas {
+    border: 5px solid #8d1b54;
+}
+
+/* Logo Tetris */
+.tetris_logo img {
+    height: 130px;
+}
+
+
+/* Section de canvas */
+.content_canvas {
+    display: flex;
+    gap: 30px;
+}
+
+.canvas > p {
+    border-bottom: 2px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaaaaa;
+    font-size: 18px;
+}
+
+.canvas {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    border: 2px solid #aaa;
+    gap: 10px;
+}
+
+/* Bouton de lecture */
+.btn_play {
+    padding: 20px 40px;
+    margin: 20px 0;
+    width: 100%;
+    background-color: #8d1b54; /* Vert */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #fff;
+}
+
+/* Instructions */
+.instruction > h3 {
+    color: #aaa;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.instruction > p {
+    margin: 10px 0;
+    color: #aaa;
+}
+
+/* Icônes d'instructions */
+.inst_icon {
+    padding: 8px 15px;
+    border: 2px solid #aaa;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* Conteneur principal du canvas */
+.main_canvas {
+    position: relative;
+}
+
+/* Minuterie */
+.timer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #b65d82;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* Activation de la minuterie */
+.timer.active {
+    opacity: 1;
+}
+
